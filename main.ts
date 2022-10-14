@@ -99,6 +99,12 @@ function portal (nextLevel: string) {
         portal3.change(LedSpriteProperty.X, -1)
     }
     gameMode = nextLevel
+    if (gameMode == "normal" || gameMode == "robot") {
+        for (let index = 0; index < 4; index++) {
+            portal1.change(LedSpriteProperty.Y, 1)
+            basic.pause(20)
+        }
+    }
     spiderPosition = 0
     portal1.delete()
     portal2.delete()
