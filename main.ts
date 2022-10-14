@@ -3,17 +3,22 @@ function die () {
 }
 function newPlatform () {
     platform_4 = game.createSprite(4, 4)
+    platform_4.set(LedSpriteProperty.Brightness, 100)
     basic.pause(tick)
     platform_3 = game.createSprite(3, 4)
+    platform_3.set(LedSpriteProperty.Brightness, 100)
     basic.pause(tick)
     platform_2 = game.createSprite(2, 4)
+    platform_2.set(LedSpriteProperty.Brightness, 100)
     basic.pause(tick)
     platform_1 = game.createSprite(1, 4)
+    platform_1.set(LedSpriteProperty.Brightness, 100)
     if (platform_1.isTouching(player)) {
         die()
     }
     basic.pause(tick)
     platform_0 = game.createSprite(0, 4)
+    platform_0.set(LedSpriteProperty.Brightness, 100)
     basic.pause(tick)
     platform_4.delete()
     basic.pause(tick)
@@ -59,9 +64,11 @@ function spiderJump () {
         }
         spiderPosition = 0
     }
+    basic.pause(50)
 }
 function newSpike (num: number) {
     spike = game.createSprite(4, num)
+    spike.set(LedSpriteProperty.Brightness, 255)
     basic.pause(tick)
     if (spike.isTouching(platform_4)) {
         spike.change(LedSpriteProperty.Y, -1)
@@ -82,6 +89,9 @@ function portal (nextLevel: string) {
     portal1 = game.createSprite(3, 2)
     portal2 = game.createSprite(4, 3)
     portal3 = game.createSprite(3, 4)
+    portal1.set(LedSpriteProperty.Brightness, 200)
+    portal2.set(LedSpriteProperty.Brightness, 180)
+    portal3.set(LedSpriteProperty.Brightness, 200)
     for (let index = 0; index < 4; index++) {
         basic.pause(300)
         portal1.change(LedSpriteProperty.X, -1)
@@ -117,6 +127,7 @@ platform_4.delete()
 player = game.createSprite(1, 4)
 tick = 300
 gameMode = "normal"
+player.set(LedSpriteProperty.Brightness, 175)
 basic.forever(function () {
     basic.pause(1000)
     time += 1
