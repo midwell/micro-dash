@@ -232,6 +232,16 @@ basic.forever(function () {
     }
 })
 basic.forever(function () {
+    if (gameMode == "spider") {
+        basic.pause(randint(50 * speed, 150 * speed))
+        if (Math.randomBoolean()) {
+            newSpike(0)
+        } else {
+            newSpike(4)
+        }
+    }
+})
+basic.forever(function () {
     basic.pause(randint(5000, 10000))
     if (gameMode == "normal" || gameMode == "robot") {
         if (randint(0, 2) <= 1) {
@@ -251,12 +261,58 @@ basic.forever(function () {
     }
 })
 basic.forever(function () {
-    if (gameMode == "spider") {
-        basic.pause(randint(50 * speed, 150 * speed))
-        if (Math.randomBoolean()) {
-            newSpike(0)
-        } else {
-            newSpike(4)
+    for (let index = 0; index < 2; index++) {
+        for (let index = 0; index < 4; index++) {
+            music.playSoundEffect(music.createSoundEffect(WaveShape.Sawtooth, 523, 523, 255, 0, 200, SoundExpressionEffect.None, InterpolationCurve.Linear), SoundExpressionPlayMode.UntilDone)
+            music.playSoundEffect(music.createSoundEffect(WaveShape.Sawtooth, 784, 784, 255, 0, 200, SoundExpressionEffect.None, InterpolationCurve.Linear), SoundExpressionPlayMode.UntilDone)
+        }
+        for (let index = 0; index < 4; index++) {
+            music.playSoundEffect(music.createSoundEffect(WaveShape.Sawtooth, 392, 392, 255, 0, 200, SoundExpressionEffect.None, InterpolationCurve.Linear), SoundExpressionPlayMode.UntilDone)
+            music.playSoundEffect(music.createSoundEffect(WaveShape.Sawtooth, 587, 587, 255, 0, 200, SoundExpressionEffect.None, InterpolationCurve.Linear), SoundExpressionPlayMode.UntilDone)
+        }
+        for (let index = 0; index < 4; index++) {
+            music.playSoundEffect(music.createSoundEffect(WaveShape.Sawtooth, 440, 440, 255, 0, 200, SoundExpressionEffect.None, InterpolationCurve.Linear), SoundExpressionPlayMode.UntilDone)
+            music.playSoundEffect(music.createSoundEffect(WaveShape.Sawtooth, 659, 659, 255, 0, 200, SoundExpressionEffect.None, InterpolationCurve.Linear), SoundExpressionPlayMode.UntilDone)
+        }
+        for (let index = 0; index < 4; index++) {
+            music.playSoundEffect(music.createSoundEffect(WaveShape.Sawtooth, 349, 349, 255, 0, 200, SoundExpressionEffect.None, InterpolationCurve.Linear), SoundExpressionPlayMode.UntilDone)
+            music.playSoundEffect(music.createSoundEffect(WaveShape.Sawtooth, 523, 523, 255, 0, 200, SoundExpressionEffect.None, InterpolationCurve.Linear), SoundExpressionPlayMode.UntilDone)
+        }
+    }
+    for (let index = 0; index < 2; index++) {
+        for (let index = 0; index < 4; index++) {
+            music.playSoundEffect(music.createSoundEffect(WaveShape.Square, 523, 523, 255, 0, 200, SoundExpressionEffect.None, InterpolationCurve.Linear), SoundExpressionPlayMode.UntilDone)
+            music.playSoundEffect(music.createSoundEffect(WaveShape.Square, 784, 784, 255, 0, 200, SoundExpressionEffect.None, InterpolationCurve.Linear), SoundExpressionPlayMode.UntilDone)
+        }
+        for (let index = 0; index < 4; index++) {
+            music.playSoundEffect(music.createSoundEffect(WaveShape.Square, 392, 392, 255, 0, 200, SoundExpressionEffect.None, InterpolationCurve.Linear), SoundExpressionPlayMode.UntilDone)
+            music.playSoundEffect(music.createSoundEffect(WaveShape.Square, 587, 587, 255, 0, 200, SoundExpressionEffect.None, InterpolationCurve.Linear), SoundExpressionPlayMode.UntilDone)
+        }
+        for (let index = 0; index < 4; index++) {
+            music.playSoundEffect(music.createSoundEffect(WaveShape.Square, 440, 440, 255, 0, 200, SoundExpressionEffect.None, InterpolationCurve.Linear), SoundExpressionPlayMode.UntilDone)
+            music.playSoundEffect(music.createSoundEffect(WaveShape.Square, 659, 659, 255, 0, 200, SoundExpressionEffect.None, InterpolationCurve.Linear), SoundExpressionPlayMode.UntilDone)
+        }
+        for (let index = 0; index < 4; index++) {
+            music.playSoundEffect(music.createSoundEffect(WaveShape.Square, 349, 349, 255, 0, 200, SoundExpressionEffect.None, InterpolationCurve.Linear), SoundExpressionPlayMode.UntilDone)
+            music.playSoundEffect(music.createSoundEffect(WaveShape.Square, 523, 523, 255, 0, 200, SoundExpressionEffect.None, InterpolationCurve.Linear), SoundExpressionPlayMode.UntilDone)
+        }
+    }
+    for (let index = 0; index < 2; index++) {
+        for (let index = 0; index < 4; index++) {
+            music.playSoundEffect(music.createSoundEffect(WaveShape.Triangle, 523, 523, 255, 0, 200, SoundExpressionEffect.None, InterpolationCurve.Linear), SoundExpressionPlayMode.UntilDone)
+            music.playSoundEffect(music.createSoundEffect(WaveShape.Triangle, 784, 784, 255, 0, 200, SoundExpressionEffect.None, InterpolationCurve.Linear), SoundExpressionPlayMode.UntilDone)
+        }
+        for (let index = 0; index < 4; index++) {
+            music.playSoundEffect(music.createSoundEffect(WaveShape.Triangle, 392, 392, 255, 0, 200, SoundExpressionEffect.None, InterpolationCurve.Linear), SoundExpressionPlayMode.UntilDone)
+            music.playSoundEffect(music.createSoundEffect(WaveShape.Triangle, 587, 587, 255, 0, 200, SoundExpressionEffect.None, InterpolationCurve.Linear), SoundExpressionPlayMode.UntilDone)
+        }
+        for (let index = 0; index < 4; index++) {
+            music.playSoundEffect(music.createSoundEffect(WaveShape.Triangle, 440, 440, 255, 0, 200, SoundExpressionEffect.None, InterpolationCurve.Linear), SoundExpressionPlayMode.UntilDone)
+            music.playSoundEffect(music.createSoundEffect(WaveShape.Triangle, 659, 659, 255, 0, 200, SoundExpressionEffect.None, InterpolationCurve.Linear), SoundExpressionPlayMode.UntilDone)
+        }
+        for (let index = 0; index < 4; index++) {
+            music.playSoundEffect(music.createSoundEffect(WaveShape.Triangle, 349, 349, 255, 0, 200, SoundExpressionEffect.None, InterpolationCurve.Linear), SoundExpressionPlayMode.UntilDone)
+            music.playSoundEffect(music.createSoundEffect(WaveShape.Triangle, 523, 523, 255, 0, 200, SoundExpressionEffect.None, InterpolationCurve.Linear), SoundExpressionPlayMode.UntilDone)
         }
     }
 })
